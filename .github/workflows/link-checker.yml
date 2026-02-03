@@ -1,0 +1,12 @@
+name: Link Checker
+on: [push]
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.5.0
+        with:
+          args: "*.md"
